@@ -1,0 +1,15 @@
+quarkus:
+  http:
+    port: 9090
+  package:
+    type: jar
+  container-image:
+    builder: docker
+    group: yilmaznaslan
+    registery: docker.io
+    name: quarkus-container-image-simple
+    build: true
+    push: true
+    tag: ${quarkus.application.version:latest}
+
+
